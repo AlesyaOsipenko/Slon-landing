@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./swiper-bundle.min.css"/>
+    <title>Slon</title>
+</head>
+<body>
+
+<header class="header">
+      <div class="container container-md">
+          <div class="header_wrapper">
+              <a href="/" class="logo">
+                  <img src="/svg/forward_logo.svg" alt="logo">
+              </a>
+
+              <nav class="header_navigation d-xl-block d-none">
+                  <a class="header_link text header_link--active " href="#">Каталог</a>
+                  <a class="header_link text " href="#">Акции</a>
+                  <a class="header_link text header_link--pseudo " href="#">Work</a>
+                  <a class="header_link text header_link--pseudo " href="#">Pay</a>
+                  <a class="header_link text header_link--pseudo " href="#">Friends</a>
+                  <a class="header_link text " href="#">О нас</a>
+                  <a class="header_link text " href="#contacts">Контакты</a>
+                  
+              </nav>
+
+              <a class="login-link" href="#">Войти</a>
+
+              <div class="d-block d-xl-none button-burger btn" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                  <img src="/svg/menu.svg" alt="burger-icon" width="20" height="20">
+              </div>
+              
+          </div>
+          
+          
+      </div>
+</header>
+
+<div class="modal fade" id="burgerModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <div class="logo">
+              <a href="/">
+                  <img src="/svg/forward_logo.svg" width="84" alt="logo-img">
+              </a>
+          </div>
+            <div class="button-burger" data-bs-toggle="modal" data-bs-target="#burgerModal">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M1.30856 18.4843C1.11329 18.6796 1.11329 18.9962 1.30856 19.1914C1.50382 19.3867 1.8204 19.3867 2.01566 19.1914L1.30856 18.4843ZM19.6933 1.51377C19.8886 1.31851 19.8886 1.00193 19.6933 0.806668C19.4981 0.611406 19.1815 0.611406 18.9862 0.806668L19.6933 1.51377ZM2.01566 19.1914L19.6933 1.51377L18.9862 0.806668L1.30856 18.4843L2.01566 19.1914Z"
+                      fill="#ffff"/>
+                  <path
+                      d="M1.35355 0.646447C1.15829 0.451184 0.841709 0.451184 0.646447 0.646447C0.451184 0.841709 0.451184 1.15829 0.646447 1.35355L1.35355 0.646447ZM18.3241 19.0312C18.5194 19.2265 18.836 19.2265 19.0312 19.0312C19.2265 18.836 19.2265 18.5194 19.0312 18.3241L18.3241 19.0312ZM0.646447 1.35355L18.3241 19.0312L19.0312 18.3241L1.35355 0.646447L0.646447 1.35355Z"
+                      fill="#ffff"/>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-body">
+              <div class="container">
+                <nav class="modal-list d-flex flex-column">
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal" >
+                    <a  class="header_link text header_link--active  " href="#">Каталог</a>
+                  </li>
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal" >
+                    <a class="header_link text " href="#">Акции</a>
+                  </li>
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal" >
+                    <a class="header_link text header_link--pseudo " href="#">Work</a>
+                  </li>
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal" >
+                    <a class="header_link text header_link--pseudo  " href="#">Pay</a>
+                  </li>
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal" >
+                    <a class="header_link text header_link--pseudo " href="#">Friends</a>
+                  </li>
+                  <li  class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                    <a class="header_link text" href="#">О нас</a>
+                  </li>
+                  <li class="mb-12" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                    <a class="header_link text " href="#contacts">Контакты</a>
+                  </li>
+                  
+                </nav>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<section class="about pb-140">
+  <div class="container">
+      <div class="about_top d-flex flex-column pb-160" >
+          <h1 class="about_title mb-24">О лизинге простыми словами</h1>
+          <p class="about_text white">Что же такое лизинг, кому он нужен и почему стоит обратить на него внимание? Расскажем в нашей статье</p>
+      </div>
+      <div class="row about_bottom">
+          <div class="col-lg-6 about-col-left">
+              <p class="text-bold white">Лизинг – это финансовый инструмент, с помощью которого можно взять в долгосрочную аренду имущество с последующим правом выкупа. То есть в конце срока договора предмет можно будет забрать в собственность</p>
+          </div>
+          <div class="col-lg-6 text white about-col-right">
+              <p class="mb-24">
+                  Этим инструментом часто пользуется бизнес, например, промышленная сфера. Компании может быть более выгодно взять в лизинг дорогостоящее оборудование, чем выкупить его сразу или взять в кредит.
+              </p>
+              <p class="mb-24">Сегодня лизинг постепенно становится все популярнее. Это современный способ приобретать предметы: гаджеты,   оборудование, технику, автомобили Еще бы, ведь это так просто: за определенную плату в месяц вы получаете в полное распоряжение устройство и можете им пользоваться как своим.</p>
+              <p class="mb-24">В России лизинг законодательно регулируется федеральным законом «О финансовой аренде» от 29.10.1998 N 164-ФЗ и статьями 665 и 666 ГК РФ.</p>
+          </div>
+      </div>
+  </div>
+</section>
+  
+    <section class="concepts pb-160">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="concepts_title">Основные понятия </h2>
+                </div>
+                <div class="col-lg-6 col--right">
+                      <div class="accordion accordion-flush accordion_concepts" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Лизингополучатель
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Лизингодатель
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Поставщик
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseFour">
+                              Страховщик
+                            </button>
+                          </h2>
+                          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="principles pb-65">
+        <div class="container">
+            <h2 class="text-center principles_title">
+                Принцип работы этого финансового инструмента очень прост
+            </h2>
+
+            <div class="d-flex justify-content-start principe--first">
+              <div class="circle circle--first">
+                <p class="circle_text text">Вы мечтаете приобрести в пользование последний iPhone, Samsung или другой смартфон. Но сразу купить дорогой телефон бывает достаточно сложно, особенно если вы привыкли регулярно его менять</p>
+                <img class="circle_number" src="/svg/principles/01.svg" alt="first-icon">
+              </div>
+              <div class="circle_img">
+                <img class="w-100" src="/img/principe1.png" alt="">
+              </div>
+              <div class="principePseudo--first"><img class="w-100" src="/svg/principePseudo1.png" alt=""></div>
+            </div>
+
+            <div class="d-flex justify-content-end principe--second">
+              <div class="circle_img">
+                <img class="w-100" src="/img/principe2.png" alt="">
+              </div>
+              <div class="circle circle--second">
+                <p class="circle_text text">В этом случае идеальным вариантом может стать как раз лизинг. 
+                  Вы можете получить в аренду 
+                  свой вожделенный смартфон, пользоваться им в течение срока договора, и в спокойном режиме выплачивать ежемесячные платежи
+                </p>
+                <img class="circle_number" src="/svg/principles/02.svg" alt="second-icon">
+              </div>
+              <div class="principePseudo--second"><img class="w-100" src="/svg/principePseudo2.png" alt=""></div>
+            </div>
+
+            <div class="d-flex justify-content-start principe--third">
+              <div class="circle circle--third">
+                <p class="circle_text text">Когда договор закончится – смартфон, взятый в лизинг, можно выкупить. Например, компания Forward предлагает помимо варианта с выкупом, еще и вариант обмена смартфона на новый</p>
+                <img class="circle_number" src="/svg/principles/03.svg" alt="third-icon">
+              </div>
+              <div class="circle_img">
+                <img class="w-100" src="/img/principe3.png" alt="">
+              </div>
+              
+            </div>
+
+            
+        </div>
+
+      
+    </section>
+
+    <section class="dop_info pb-160">
+      <div class="container">
+        <div class="row">
+          <div class="img-box">
+            <img  src="/svg/forward_logo.svg"  alt="logo-svg">
+          </div>
+          
+          <div class="dop_info-wrapper white">
+            <p class="mb-24">Важно понимать, что приобретаемое таким образом имущество до конца срока действия договора является собственностью лизингодателя. То есть вы не сможете ни продать, ни как-то по-другому официально распорядиться приобретаемым условным смартфоном до тех пор, пока не выкупите его. Вы – только пользователь!</p>
+
+            <p>Лизинг еще называют подпиской, но сути данного способа долгосрочной аренды с последующим выкупом или апгрейдом это не меняет.</p>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog_top">
+          <h2 class="mb-24">Кто может воспользоваться 
+            финансовым инструментом?</h2>
+            <p class="text white">Или, другими словами – кому он нужен? Клиентом может стать 
+              как физическое, так и юридическое лицо. Наверняка вы слышали 
+              о лизинге для бизнеса, но сейчас все чаще обычные люди берут 
+              по программе подписки необходимые им бытовые предметы вроде смартфонов, ноутбуков, планшетов и даже стиральных машин
+            </p>
+        </div>
+        <div class="d-flex align-items-center justify-content-between position-relative">
+          <div class="slider-button-prev">
+            <svg width="16" height="30" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1L13.5 15L2 29" stroke="#8A86A7" stroke-width="3"/>
+              </svg>
+          </div>
+          <div class="swiper">
+
+              <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="catalog-box">
+                              <img src="./svg/catalog/Catalogitem1.svg" alt="catalog-item">
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="catalog-box">
+                          <img src="./svg/catalog/Catalogitem7.svg" alt="catalog-item">
+                        </div>
+                        </div>
+                      <div class="swiper-slide">
+                        <div class="catalog-box">
+                          <img src="./svg/catalog/Catalogitem2.svg" alt="catalog-item">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                      <div class="catalog-box">
+                        <img src="./svg/catalog/Catalogitem3.svg" alt="catalog-item">
+                      </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="catalog-box">
+                          <img src="./svg/catalog/Catalogitem4.svg" alt="catalog-item">
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="catalog-box">
+                            <img src="./svg/catalog/Catalogitem5.svg" alt="catalog-item">
+                          </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="catalog-box">
+                              <img src="./svg/catalog/Catalogitem6.svg" alt="catalog-item">
+                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="catalog-box">
+                                <img src="./svg/catalog/Catalogitem8.svg" alt="catalog-item">
+                              </div>
+                              </div>
+              </div>
+
+          </div>
+          <div class="swiper-pagination catalog-pagination"></div>
+          <div class="slider-button-next">
+              <svg width="16" height="30" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 1L13.5 15L2 29" stroke="#8A86A7" stroke-width="3"/>
+              </svg>
+          </div>
+          <div class="catalogPseudo"></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="dop_info pb-160">
+      <div class="container">
+        <div class="row">
+          <div class="img-box">
+            <img  src="/svg/forward_logo.svg"  alt="logo-svg">
+          </div>
+          <div class="dop_info-wrapper white">
+            <p class="mb-24">Forward предоставляет по программе подписки смартфоны, игровые приставки Xbox, технику Apple, бытовую технику (духовые шкафы, стиральные и сушильные машины, холодильники, кофемашины, и многое другое.</p>
+
+            <p>Если вы раздумываете о том, чтобы приобрести дорогой телефон или иное оборудование, стоит подумать о том, чтобы взять его в лизинг.</p>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="container">
+        <h2 class="advantages_title text-center">Кому же подходит лизинг?</h2>
+        <div class="advantages_wrapper pb-160">
+          <div class="advantages_container">
+            <div class="advantages_box advantages_box--first" data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div class="d-flex flex-column advantage_box-desc white">
+                <h4>Когда нужен </br>
+                  новый гаджет</h3>
+                  <p >Современный и актуальный, но не получается приобрести его сразу</p>
+                  <img src="/svg/advantages/cycle.svg" alt="advantage-img">
+              </div>
+            </div>
+            <div class="advantages_box advantages_box--second" data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div class="d-flex flex-column advantage_box-desc white">
+                <h4>Важны низкие </br>
+                  платежи</h3>
+                  <p>Пользоваться гаджетом 
+                    не оплачивая его стоимость одним платежом</p>
+                    <img src="/svg/advantages/12.svg" alt="advantage-img">
+              </div>
+            </div>
+            <div class="advantages_box advantages_box--third" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div class="d-flex flex-column advantage_box-desc white">
+                <h4>Гарантированная</br>
+                  выгода</h3>
+                  <p>Экономия до 40% каждый год при апгрейде на новый смартфон </p>
+                  <img src="/svg/advantages/currency.svg" alt="advantage-img">
+              </div>
+            </div>
+            <div class="advantages_box advantages_box--fourth" data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out" data-aos-duration="800">
+              <div class="d-flex flex-column advantage_box-desc white">
+                <h4>Получить флагман</br>
+                  за 2 клика</h3>
+                  <p>Оформляйте онлайн и получите одобрение вашей заявки 
+                    в течении 1 минуты</p>
+                    <img src="/svg/advantages/play.svg" alt="advantage-img">
+              </div>
+            </div>
+  
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="about--second pb-180">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Какое имущество можно взять 
+              в лизинг</h2>
+          </div>
+          <div class="col-lg-6 col-right">
+            <p class="mb-24 text white">Предметом договора может быть любое имущество, которое можно использовать для бизнеса или для личных нужд. Не могут быть предметом лизинга
+              по закону природные объекты, земельные участки, потребляемые вещи, например, продукты питания, стройматериалы, сырье, а также имущество, свободное обращение которого запрещено законом (например, оружие). Также не получится взять в лизинг продукты питания, сырье, стройматериалы, оборудование без заводских номеров.</p>
+              
+            <p class="text white">А вот все остальное, получается, можно. Чаще всего 
+              в лизинг берут автомобили, недвижимость, спецтехнику, оборудование для бизнеса (офисную технику, сложное IT-оборудование или оборудование для промышленного производства), бытовую технику и электронику.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="priorities pb-140">
+      <div class="container">
+        <h2 class="white text-center">
+          Стоит ли брать в лизинг смартфон? Вам подойдет такой вариант, если:
+        </h2>
+        <div class="priorities_wrapper d-flex">
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--first" src="/svg/priorities/test.svg" alt="priority-img">
+            <p class=" white">Вы любите пользоваться новинками, интересуетесь флагманами и регулярно обновляете гаджеты</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--second" src="/svg/priorities/money.svg" alt="priority-img">
+            <p class=" white">Вы хотите, чтобы ежемесячный платеж был ниже и не сильно бил по карману</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--third" src="/svg/priorities/phone.svg" alt="priority-img">
+            <p class=" white">Вы хотите попробовать новую модель гаджета, прежде чем на нее перейти
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dop_info pb-160">
+      <div class="container">
+        <div class="row">
+          <div class="img-box">
+            <img  src="/svg/forward_logo.svg"  alt="logo-svg">
+          </div>
+          <div class="dop_info-wrapper white">
+            <p class="mb-24">Сейчас в лизинг можно выгодно взять смартфоны топовых производителей. Лизинг Samsung или iPhone топовой модели обойдется дешевле, чем кредит.
+              Также сейчас через данный финансовый инструмент можно оформить планшеты Apple, ноутбуки Acer, Dell 
+              и Apple, игровые приставки Microsoft и многое другое</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="priorities priorities--second pb-160">
+      <div class="container">
+        <h2 class="white text-center">
+          А что насчет <br> бытовой техники?  
+        </h2>
+        <div class="priorities_wrapper d-flex">
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--fourth" src="/svg/priorities/washing.svg" alt="priority-img">
+            <p class="text white">Регулярно обновляйте технику, пользуетесь 
+              лучшими моделями топовых производителей</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--fifth" src="/svg/priorities/moneybox.svg" alt="priority-img">
+            <p class="text white">Вы не готовы выплачивать сразу большие суммы за то, чем, возможно, не захотите пользоваться годами</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center priority_box">
+            <img class="img--six" src="/svg/priorities/gift.svg" alt="priority-img">
+            <p class="text white">Вы не хотите думать 
+              о самовывозе 
+              и предпочитаете 
+              выбирать доставку               
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concepts concepts--second pb-160">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <h2 class="concepts_title">Виды лизинга</h2>
+                  <p class="text white description">В настоящее время существует три вида лизинга, которые принято выделять 
+                    в отдельные финансовые инструменты</p>
+              </div>
+              <div class="col-lg-6 col--right">
+                  <div class="accordion accordion-flush accordion_concepts mb-32" id="accordionFlushExample2">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-heading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-heading1">
+                          Финансовый лизинг
+                        </button>
+                      </h2>
+                      <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample2">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-heading2">
+                          Операционный лизинг
+                        </button>
+                      </h2>
+                      <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-heading3">
+                          Возвратный лизинг
+                        </button>
+                      </h2>
+                      <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text white concepts_dop-info">
+                    *Также в отдельную категорию выделяют <strong>международный лизинг</strong> – когда одна из сторон договора является резидентом иностранного государства
+                  </span>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="advantages--second">
+    <div class="container">
+      <div class="row advantages--second_top">
+        <div class="col-lg-6">
+          <h3 class="white">Какие есть преимущества 
+            у лизинга по сравнению 
+            с кредитом? </h3>
+        </div>
+        <div class="col-lg-6 col-right">
+          <p class="text white">По сравнению с арендой и кредитом, у лизинга есть ряд преимуществ. В отличие от кредита предметом договора выступают деньги. Тогда как в договоре лизинга предметом выступает именно имущество
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <ul class="advantages--second_list d-flex flex-column">
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Не нужно вносить залог</h4>
+              <p>Само имущество и является залогом – если вы не будете исправно вносить платежи, у вас его заберут.
+                В случае со смартфоном, например – просто заблокируют</p>
+            </li>
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Не нужно платить налог на имущество и транспортный налог</h4>
+              <p>Владельцем остается лизингодатель</p>
+            </li>
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Не нужно думать о доставке и установке</h4>
+              <p>Если вы приобретаете в лизинг бытовую технику, компания берет на себя все заботы. Только представьте: вам не только привезут на дом стиральную машину, 
+                но еще и установят ее, и будут заботиться о ней 
+                (делать ремонт по гарантии)</p>
+            </li>
+          </ul>
+      </div>
+        <div class="col-lg-6">
+          <ul class="advantages--second_list d-flex flex-column">
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Приобретаемая техника скорее всего обойдется вам дешевле </h4>
+              <p>Лизинговые компании часто закупаются оптом, 
+                или имеют возможность предоставлять хорошие скидки. Также в случае с Forward у вас нет необходимости выплачивать остаточную стоимость того же смартфона, если вы планируете взять 
+                по программе новый</p>
+            </li>
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Более низкая процентная ставка </h4>
+              <p>Позволяет приобрести необходимые товары выгодно</p>
+            </li>
+            <li class="list_item d-flex flex-column">
+              <h4 class="mb-12">Быстрое оформление</h4>
+              <p>Например, в Forward, если ваша кредитная история 
+                в порядке, вы получите одобрение за 5 минут</p>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dop_info dop_info--fourth pb-160">
+    <div class="container">
+      <div class="row">
+        <div class="img-box">
+          <img  src="/svg/forward_logo.svg"  alt="logo-svg">
+        </div>
+        <div class="dop_info-wrapper white">
+          <p class="mb-24">Еще один несомненный плюс программы подписки Forward: не нужно мучиться с продажей бывшего в употреблении смартфона или другой техники. Вы можете сдать ее в конце срока договора и получить новую!
+            Есть ли преимущества у лизинга по сравнению с арендой? Лизинг, по сути, это и есть долгосрочная аренда. Клиент арендует имущество на протяжении всего срока договора. В обоих случаях есть владелец имущества, который готов его сдать на определенных условиях. Только у лизинга перед арендой есть несомненное преимущество: в конце срока договора после всех платежей имущество переход в собственность лизингополучателя. Тогда как при договоре аренды этого не происходит – арендодатель остается владельцем имущества при любом сроке договора и количестве платежей</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="container">
+      <h2 class="text-center">Как оформить <br> договор лизинга?</h2>
+      <div class="steps_wrapper">
+          <img src="/img/steps.png" alt="steps-img">
+          <div class="steps_inner d-flex flex-column">
+            <div class="steps_box">
+              <p>Вам нужно обратиться в компанию, которая предоставляет лизинговые услуги, выбрать предмет договора (например, телефон по подписке), 
+                и оформить договор. Если вы физическое лицо, для оформления потребуется предоставить документы: подписать заявку, и подтвердить свою личность. Для юридических лиц список документов немного шире, там будут нужны также документы компании</p>
+            </div>
+            <div class="steps_box">
+              <p>При оформлении Договора стоит внимательно читать условия. 
+                Особое внимание следует обратить на сроки и размеры выплат, 
+                условия досрочного выкупа (если вы захотите закрыть его раньше срока 
+                и выкупить свой смартфон), условия нарушения договора (в каких случаях 
+                компания может разорвать отношения и забрать у вас имущество), 
+                а также на дополнительные договоры страхования и обслуживания</p>
+            </div>
+            <div class="steps_box">
+              <p>На протяжении всего срока ответственность за имущество будете нести вы. Так что, если вы, допустим, потеряете свой смартфон, взятый в лизинг, вам все равно придется выплачивать полную его стоимость</p>
+            </div>
+            <div class="steps_box">
+              <p>Если вы не очень аккуратный пользователь и часто роняете смартфон, услуга страхования техники будет очень полезна, поэтому компания часто настаивает на необходимости ее включения в договор. Иначе, например, замена экрана какого-нибудь флагманского смартфона обойдется вам в круглую сумму</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="example">
+    <div class="container">
+      <div class="row example_top">
+        <div class="col-lg-6">
+          <h2>
+            Что такое остаточная стоимость?
+          </h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="text mb-24">В некоторых случаях Договор лизинга заключается на сумму, которая меньше полной стоимости всего имущества</p>
+          <p class="text">Остаточная стоимость – это часть стоимости имущества, взятого в лизинг, которая остается к выплате после окончания срока действия договора</p>
+        </div>
+      </div>
+      <div class="example_bottom pb-160">
+        <h3 class="text-center">Объясним на примере </h3>
+        <div class="row">
+          <div class="example_grid">
+            <div class="example_card "><p>Вы решили взять в лизинг <br> смартфон по программе подписки</p></div>
+            <div class="example_card example_card--second"><p>Договор заключается на 1 год <br> с минимальными ежемесячными платежами</p></div>
+            <div class="example_card "><p>Допустим, за год вы успели погасить 60% всей стоимости смартфона. Через год вы решаете, что делать 
+            с оставшимися к оплате 40%</p></div>
+            <div class="example_card"><p>Внести единоразово и забрать смартфон в собственность (никаких комиссий за выкуп нет)</p></div>
+            <div class="example_card"><p>Продолжать выплачивать минимальными платежами, пока стоимость смартфона полностью не погасится</p></div>
+            <div class="example_card "><p>Не выплачивать вовсе 
+              при возврате гаджета 
+              и оформлении нового устройства</p></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concepts--third pb-160">
+    <div class="container">
+      <h2 class="text-center title ">Какие есть варианты платежей?</h2>
+      <div class="row">
+        <div class="col-lg-6">
+            <h4>Главное, чтобы платежи были регулярными в соответствии 
+              с графиком, который был составлен при оформлении. В зависимости 
+              от компании и предмета договора, график платежей может быть разным. Платежи бывают: регрессивными, аннуитетными, сезонными. Чем же они отличаются?</h4>
+        </div>
+        <div class="col-lg-6 col--right">
+              <div class="accordion accordion-flush accordion_concepts mb-32" id="accordionFlushExample3">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFirst">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFirst" aria-expanded="false" aria-controls="flush-headingFirst">
+                      Финансовый лизинг
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFirst" class="accordion-collapse collapse" aria-labelledby="flush-headingFirst" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingSecond">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSecond" aria-expanded="false" aria-controls="flush-headingSecond">
+                      Операционный лизинг
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSecond" class="accordion-collapse collapse" aria-labelledby="flush-headingSecond" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThird">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThird" aria-expanded="false" aria-controls="flush-headingThird">
+                      Возвратный лизинг
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThird" class="accordion-collapse collapse" aria-labelledby="fflush-headingThird" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="info-block">
+    <div class="container">
+      <div class="info-block_top">
+        <h2>А что будет, <br>
+          если не платить?</h2>
+          <p>Если клиент не соблюдает график платежей, или вовсе отказывается вносить суммы, прописанные в договоре, компания вправе начислить пени и штрафы, а также и вовсе расторгнуть договор, или обратиться в суд. Обычно все эти нюансы прописываются в самом Договоре, поэтому стоит читать условия внимательнее
+          </p>
+      </div>
+      <nav class="info_breadcrumbs" style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page"><a href="#">главная</a></li>
+          <li class="breadcrumb-item" aria-current="page"><a href="#">акции</a></li>
+          <li class="breadcrumb-item active">Samsung Upgrade</li>
+        </ol>
+      </nav>
+      
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer_top">
+        <a class="text-bold" href="tel:+88007707575">8 800 770-75-75</a>
+        <div class="d-flex links_box">
+          <a href="https://apps.apple.com/ru/app/yandex-disk/id553266487?referrer=appmetrica_tracking_id%3D673977363113009387%26ym_tracking_id%3D15545722477468912115" target="_blank">
+            <img src="/img/appStore.png" alt="footer-img">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=ru.yandex.disk&referrer=appmetrica_tracking_id%3D169574258668806904%26ym_tracking_id%3D3290812072942433276" target="_blank">
+            <img src="/img/GooglePlay.png" alt="footer-img">
+          </a>
+          
+        </div>
+      </div>
+      <nav class="footer_navigation">
+        <ul class="footer_list">
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Связаться с нами</a></li>
+          <li><a href="#">Политика обработки данных</a></li>
+          <li><a href="#">Правила лизинга</a></li>
+          <li><a href="#">Политика обработки файлов cookie</a></li>
+          <li><a href="#">Проверка смартфона по IMEI</a></li>
+        </ul>
+      </nav>
+      <small>© Forward Leasing <br>
+        Словосочетания «Всегда новый» и «Подписка на стиль жизни» являются зарегистрированными товарными знаками ООО «Форвард лизинг» и подлежат охране в соответствии с законодательством РФ</small>
+    </div>
+  </footer>
+    
+    <script src="./swiper-bundle.min.js"></script>
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

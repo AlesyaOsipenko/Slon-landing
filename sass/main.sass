@@ -1,0 +1,944 @@
+html *
+    outline: none
+    padding: 0
+    margin: 0
+    
+
+body
+    font-family: 'ProximaNova-Light', sans-serif
+    background-color: #160c4e
+    padding-top: 200px
+    color: #FFFFFF
+    scroll-behavior: smooth
+    @media (max-width: 1200px)
+        padding-top: 150px
+
+
+::-webkit-scrollbar
+    width: 6px
+    cursor: pointer
+    
+    /* Track */
+::-webkit-scrollbar-track
+    background: #160c4e
+
+    /* Handle */
+::-webkit-scrollbar-thumb
+    background: #ff6732
+    scrollbar-width: thin
+    border-radius: 10px
+    cursor: pointer
+    
+
+::selection
+    background-color: #ff6732
+
+/* width */
+
+.w-100
+    width: 100% 
+
+ul, ol
+    li
+        list-style-type: none
+
+img
+    object-fit: cover
+
+img, svg
+    vertical-align: middle
+
+a
+    text-decoration: none
+    color: #FFFFFF
+    transition: .3s
+
+a
+    &:hover
+        color: #FFFFFF
+        transform: translateY(-3px)
+
+
+.swiper::selection 
+    background: none
+
+
+// .row > *
+//     padding-left: 15px
+//     padding-right: 15px
+    
+h1, h2
+    color: #FFFFFF
+    font-weight: 600
+    font-size: 64px
+    line-height: 80px
+    @media (max-width: 1200px)
+        font-size: 40px
+        line-height: 125% 
+    @media (max-width: 768px)
+        font-size: 35px
+        line-height: 125%  
+
+h3
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-weight: 700
+    font-size: 35px
+    line-height: 125%   
+
+h4
+    font-weight: 700
+    font-size: 24px
+    line-height: 125%   
+
+.text-bold
+    font-weight: 600
+    font-size: 35px
+    line-height: 125%
+    @media (max-width: 768px)
+        font-size: 24px !important
+    
+
+.text, p
+    font-weight: 400
+    font-size: 18px
+    line-height: 125%
+
+
+
+// colors
+
+.white
+    color:#FFFFFF
+
+// sizes
+.mb-12
+    margin-bottom: 12px
+
+.mb-24
+    margin-bottom: 24px
+
+.mb-32
+    margin-bottom: 32px
+
+.pb-65
+    padding-bottom: 65px    
+
+.pb-140
+    padding-bottom: 140px
+    @media (max-width: 1200px)
+        padding-bottom: 100px
+    @media (max-width: 991px)
+        padding-bottom: 80px
+
+.pb-160
+    padding-bottom: 160px    
+    @media (max-width: 1200px)
+        padding-bottom: 120px
+    @media (max-width: 991px)
+        padding-bottom: 80px
+
+.pb-180
+    padding-bottom: 180px    
+    @media (max-width: 1200px)
+        padding-bottom: 140px
+    @media (max-width: 991px)
+        padding-bottom: 100px
+
+.mr-80
+    margin-right: 80px
+
+.mr-110
+    margin-right: 80px    
+
+@media (min-width: 1200px)
+    .d-xl-block 
+        display: flex !important
+
+@media (min-width: 1400px)
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    max-width: 1100px
+
+#burgerModal
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    overflow-y: auto
+    outline: 0
+
+    .button-burger
+        cursor: pointer
+
+    .modal-dialog
+        max-width: none
+        transform: none
+        margin: 0
+        height: 100%
+        width: auto
+        position: relative
+        pointer-events: none
+
+
+        .modal-content
+            min-height: 100%
+            position: relative
+            display: flex
+            flex-direction: column
+            width: 80%
+            pointer-events: auto
+            background:  #160c4e
+            background-clip: padding-box
+            border-radius: 0.3rem
+            outline: none
+            border: none
+    .modal-list
+        list-style: none
+        a:hover
+            transform: none
+            transition: 0.3s
+            color: #FF6732
+
+
+
+
+.top-wrapper
+    overflow-x: hidden
+
+.header
+    position: relative
+    transition: 0.3s
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    // &::before
+    //     position: absolute
+    //     content:""
+    //     background-image: url('/img/ellipse1.png')   
+    //     background-repeat: no-repeat 
+    //     width: 1361.21px
+    //     height: 1361.21px
+
+    .header_wrapper
+        padding: 24px 0 32px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 90px
+        @media (max-width: 1201px)
+            justify-content: space-between
+            padding: 15px 0
+
+        .logo
+            &:hover
+                transform: none
+
+        .header_navigation
+            display: flex
+            gap: 24px
+            align-items: center
+
+            .header_link
+                white-space: nowrap
+                &:hover
+                    color: #FF6732
+
+            .header_link--active
+                padding: 12px 24px
+                background: #FF6732
+                border-radius: 420px
+                font-family: 'ProximaNova-Bold', sans-serif
+                font-weight: 700
+                &:hover
+                    color: #FFFFFF
+
+            .header_link--pseudo
+                position: relative
+                padding-left: 26px 
+                &::before
+                    content: ""
+                    position: absolute
+                    background-image: url('/svg/linkPseudo.svg')
+                    width: 25px
+                    height: 21px
+                    left: -7px
+                    background-repeat: no-repeat
+    .login-link
+        padding-bottom: 1px
+        border-bottom: 1px solid #FFFFFF
+        &:hover
+            color: #FF6732
+            transform: none
+        @media (max-width: 1199px)
+            position: absolute
+            right: 110px
+.header.tiny
+    background: #160c4e
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07)
+    z-index: 100
+    
+
+.about
+    .about_top
+        max-width: 686px
+        .about_text
+            font-size: 24px
+            font-weight: 400
+            line-height: 30px
+            @media (max-width: 768px)
+                font-size: 18px 
+                line-height: 18px 
+    .about-col-right
+        padding-left: 75px
+        @media (max-width: 992px)
+            padding-left: 12px
+            margin-top: 20px 
+
+.concepts
+    .concepts_title
+        @media (max-width: 992px)
+            margin-bottom: 25px
+    .col--right
+        padding-left: 60px
+        @media (max-width: 992px)
+            padding-left: 12px
+            
+    .description
+        max-width: 395px
+        @media (max-width: 1200px)
+            max-width: 100%
+            padding-bottom: 45px
+
+.concepts--second
+    .accordion-item
+        button
+            font-family: 'ProximaNova-Bold', sans-serif
+            font-size: 36px
+            line-height: 43px
+            @media (max-width: 768px)
+                font-size: 24px
+                line-height: 125%
+
+
+
+.advantages--second
+    margin-bottom: 55px
+    .advantages--second_top
+        padding-bottom: 80px
+        .col-right
+            padding-left: 65px
+            @media (max-width: 992px)
+                padding-left: 12px
+    .list_item
+        padding-left: 47px
+        margin-bottom: 35px
+        position: relative
+        list-style: block
+        &::before
+            content: ""
+            position: absolute
+            background-image: url('/svg/list_check.svg')
+            background-repeat: no-repeat
+            width: 31px
+            height: 31px
+            left: 0
+            top: 0
+            
+.principles
+    .principles_title
+        max-width: 910px
+        margin: 0 auto 90px
+
+    .circle--second
+        margin-left: 162px
+        transform: rotate(-90deg)
+        @media (max-width: 560px)
+            margin-left: 0px
+
+    .circle--third
+        margin-right: 180px 
+        transform: rotate(-90deg)
+        @media (max-width: 560px)
+            margin-right: 0px
+
+    .circle
+        background: radial-gradient(77.63% 62.32% at 86.53% 28.21%, #5F00A9 0%, rgba(92, 0, 184, 0.822398) 42.76%, rgba(82, 0, 255, 0) 127.75%)
+        width: 358px
+        height: 358px
+        background-size: contain
+        background-repeat: no-repeat
+        border-radius: 100%
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        @media (max-width: 560px)
+            margin-bottom: 70px
+            width: 300px
+            height: 300px
+
+        .circle_number
+            position: absolute
+            top: -18px
+            left: 35px
+        
+        .circle_text
+            max-width: 355px
+            color:#FFFFFF
+            padding-left: 40px
+            padding-top: 30px
+            @media (max-width: 560px)
+                padding-left: 10px
+                font-size: 14px
+    .circle:last-child
+        margin-bottom: 0px
+
+    .circle_img
+        max-width: 400px
+        max-height: 400px
+        @media (max-width: 768px)
+            display: none
+
+    .principe--first
+        margin-bottom: 160px
+        padding-top: 18px
+        position: relative
+        @media (max-width: 768px)
+            margin-bottom: 0
+
+        .principePseudo--first
+            width: 650px
+            position: absolute
+            bottom:0px
+            left: 50%
+            transform: translate(-55%, 100%)
+            @media (max-width: 768px)
+                display: none
+
+    .circle--first
+        margin-right: 162px
+        position: relative
+        @media (max-width: 560px)
+            margin-right: 0px
+
+    .principe--second
+        position: relative
+        margin-bottom: 125px
+        @media (max-width: 768px)
+            margin-bottom: 0
+        p
+            transform: rotate(90deg)
+        .principePseudo--second
+            width: 790px
+            position: absolute
+            bottom:0px
+            left: 50%
+            transform: translate(-55%, 100%)
+            @media (max-width: 768px)
+                display: none
+
+    .principe--third
+        p
+            transform: rotate(90deg)
+
+    .circle--second, .circle--third
+        .circle_number
+            top: 60px
+            left: 255px
+            transform: rotate(90deg)     
+            @media (max-width: 560px)
+                left: 215px
+
+    .principe--first, .principe--second, .principe--third
+        @media (max-width: 560px)
+            justify-content: center !important
+
+.dop_info
+    .img-box
+        max-width: 240px
+        height: 60px
+        @media (max-width: 992px)
+            display: none
+        img
+            width: 100%
+            object-fit: contain
+
+    .dop_info-wrapper
+        background: #FF6732
+        padding: 40px 48px 35px
+        border-radius: 64px 64px 64px 0px
+        max-width: 780px
+        @media (max-width: 1100px)
+            max-width: 670px
+
+    .row
+        align-items: flex-end
+        justify-content: space-between
+        @media (max-width: 992px)
+            padding: 0 20px
+            justify-content: center
+            
+
+        p
+            font-size: 24px
+            line-height: 125%
+            @media (max-width: 1200px)
+                font-size: 18px
+
+.dop_info--fourth
+    p
+        font-size: 18px !important
+
+.catalog
+    margin-bottom: 90px
+    .container
+        max-width: 1150px
+        .catalog_top
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-bottom: 60px
+            text-align: center
+            p
+                max-width: 655px
+        .catalog-box
+            width: 170px
+            height: 205px
+            img
+                width: 100%
+                height: 100%
+
+        .swiper
+            cursor: pointer
+            .swiper-slide
+                display: flex
+                justify-content: center
+
+        .swiper-pagination
+            display: none
+            @media (max-width: 768px)
+                display: block
+                bottom: -25%
+                position: absolute
+            .swiper-pagination-bullet
+                opacity: 1
+                background: #ffff
+                width: 8px
+                height: 8px
+                margin: 0 5px
+
+            .swiper-pagination-bullet-active
+                background: #FF6732
+
+        .slider-button-next
+            transform: translateX(90%)
+            @media (max-width: 1200px)
+                transform: translateX(5px)
+            @media (max-width: 991px)
+                transform: translateX(-15px)
+        .slider-button-prev
+            transform: translateX(-90%) rotate(180deg)
+            @media (max-width: 991px)
+                transform: translateX(15px) rotate(180deg)
+        .swiper-button-disabled
+            opacity: .3
+            visibility: hidden
+        .catalogPseudo
+            position: absolute
+            right: 0
+            top: 0
+            background: linear-gradient(270deg, #160C4E 30.99%, rgba(22, 12, 78, 0) 100%)
+            width: 174px
+            height: 200px
+            z-index: 1
+            @media (max-width: 1200px)
+                width: 270px
+            @media (max-width: 768px)
+                display: none
+        .slider-button-next, .slider-button-prev
+            z-index: 1000
+            @media (max-width: 768px)
+                display: none
+
+.advantages
+    .advantages_title
+        padding-bottom: 100px  
+    .advantages_container
+        position: relative
+        height: 302px
+        @media (max-width: 1100px)
+            display: flex
+            justify-content: center
+        @media (max-width: 990px)
+            flex-direction: column
+            height: auto
+            align-items: center
+            gap: 100px
+        .advantages_box
+            position: absolute
+            width: 302px
+            height: 302px
+            border-radius: 100%
+            display: flex
+            align-items: center
+            padding-left: 30px
+            @media (max-width: 1200px)
+                width: 270px
+                height: 270px
+            @media (max-width: 1100px)
+                position: static
+                width: 250px
+                height: 250px
+                padding-left: 15px
+            .advantage_box-desc
+                position: relative
+                max-width: 218px
+                h4
+                    margin-bottom: 5px
+                    @media (max-width: 1100px)
+                        font-size: 16px
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 125%
+                    @media (max-width: 1100px)
+                        font-size: 14px
+                img
+                    position: absolute
+                    top: -135px    
+        .advantages_box--first
+            background: linear-gradient(92.58deg, #E96F2A 2.16%, rgba(233, 111, 42, 0) 98.06%)
+            z-index: 1   
+            top: 10px
+            left: 5px
+
+        .advantages_box--second
+            background: linear-gradient(92.58deg, #A930AB 2.16%, rgba(169, 48, 171, 0) 98.06%)
+            z-index: 2
+            top: 10px
+            left: 265px
+
+        .advantages_box--third
+            background: linear-gradient(92.58deg, #1BA3C0 2.16%, rgba(27, 163, 192, 0) 98.06%)
+            z-index: 3
+            top: 10px
+            left: 525px
+
+        .advantages_box--fourth
+            background: linear-gradient(92.58deg, #7113BB 2.16%, rgba(113, 19, 187, 0) 98.06%)
+            z-index: 4
+            top: 10px
+            left: 785px    
+
+.about--second
+    .col-right
+        padding-left: 65px
+        @media (max-width: 992px)
+            padding-left: 12px
+    
+.priorities
+    h2
+        max-width: 786px
+        padding-bottom: 90px
+        margin: 0 auto
+
+    .priorities_wrapper
+        gap: 82px
+        @media (max-width: 560px)
+            flex-direction: column
+            align-items: center
+
+        .priority_box
+            max-width: 320px
+            align-items: center
+            img
+                margin-bottom: 52px
+            p
+                font-size: 24px
+                line-height: 29px
+                @media (max-width: 1200px)
+                    font-size: 18px
+                    line-height: 21px
+                @media (max-width: 560px)
+                    text-align: center
+        .img--first
+            width: 92px
+            height: 132px
+        .img--second
+            width: 131px
+            height: 139px
+        .img--third
+            width: 118px
+            height: 130px
+        .img--fourth
+            width: 163px
+            height: 152px
+        .img--fifth
+            width: 156px
+            height: 156px
+        .img--six 
+            width: 153px
+            height: 138px
+
+
+.steps
+    margin-bottom: 95px
+    h2
+        margin: 0 auto 60px
+    .steps_wrapper
+        display: flex
+        align-items: center
+        img
+            width: 72px
+            height: 921px
+            @media (max-width: 560px) 
+                display: none
+        .steps_inner
+            padding-left: 10px
+            align-items: flex-end
+            @media (max-width: 560px) 
+                align-items: center
+                padding-left: 0
+            .steps_box
+                display: flex
+                padding: 32px 70px 32px 40px
+                width: 95%
+                border: 2px solid #FF6732
+                border-radius: 24px
+                background-color: transparent
+                margin-bottom: 65px
+                @media (max-width: 560px) 
+                    width: 100%
+                    padding: 20px
+                    margin-bottom: 35px
+                p
+                    font-size: 24px
+                    line-height: 30px
+                    max-width: 840px
+                    @media (max-width: 768px)
+                        font-size: 18px
+                        line-height: 125%
+                    @media (max-width: 560px) 
+                        font-size: 14px
+            .steps_box:last-child
+                margin-bottom: 0
+
+.example
+    .example_top
+        padding-bottom: 80px
+        h2
+            max-width: 345px
+            @media (max-width: 1200px)
+                max-width: 100%
+                padding-bottom: 45px
+    .example_bottom
+        h3
+            margin-bottom: 60px
+        .row-top
+            margin-bottom: 205px
+            display: flex
+            gap: 70px
+        .row-bottom
+            display: flex
+            gap: 70px
+        .example_grid
+            display: grid
+            justify-content: center
+            grid-template-columns: repeat(3, 312px)
+            grid-gap: 70px
+            grid-template-rows: repeat(2, 192px)
+            row-gap: 215px
+            @media (max-width: 1100px)
+                grid-template-columns: repeat(2, 312px)
+                grid-template-rows: repeat(3, 192px)
+                row-gap: 40px
+            @media (max-width: 768px)
+                grid-template-columns: repeat(2, 260px)
+                grid-template-rows: repeat(3, 192px)
+                row-gap: 40px
+            @media (max-width: 560px)
+                grid-template-columns: repeat(1, 312px)
+                grid-auto-rows: 200px
+            @media (max-width: 400px)
+                grid-template-columns: minmax(auto, 312px)
+
+        .example_card
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            padding: 0 10px
+            // max-width: 312px
+            // height: 192px
+            background: linear-gradient(to right bottom, #210a6e 0%, rgba(82, 0, 255, 0) 100%)
+            border-radius: 6px
+            p
+                font-weight: 400
+                font-size: 18px
+                line-height: 21px
+                @media (max-width: 768px)
+                    font-size: 16px
+        .example_card--second
+            position: relative
+            &::before
+                position: absolute
+                content: ""
+                background-image: url('/svg/arrowRight.svg')
+                background-repeat: no-repeat
+                width: 42px
+                height: 42px
+                top: 50%
+                left: -18%
+                @media (max-width: 1100px)
+                    display: none 
+            &::after
+                &::before
+                position: absolute
+                content: ""
+                background-image: url('/svg/arrowRight.svg')
+                background-repeat: no-repeat
+                width: 42px
+                height: 42px
+                top: 50%
+                right: -18%
+                @media (max-width: 1100px)
+                    display: none    
+
+.concepts--third
+    .title
+        max-width: 830px
+        margin: 0 auto 60px
+    .col--right
+        padding-left: 60px
+        @media (max-width: 992px)
+            padding-left: 12px
+    h4
+        @media (max-width: 992px)
+            padding-bottom: 45px    
+
+.info-block
+    margin-bottom: 60px
+    .info-block_top
+        h2
+            margin-bottom: 24px
+        margin: 0 auto 55px
+        text-align: center
+        max-width: 630px
+    .breadcrumb
+        margin: 0    
+    .info_breadcrumbs
+        padding: 14px
+        border-top: 1px solid #C0C2CC
+        border-bottom: 1px solid #C0C2CC
+        
+.footer
+    padding-bottom: 120px
+    @media (max-width: 768px)
+        padding-bottom: 50px
+    .footer_top
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 42px
+        a
+            padding-bottom: 40px
+        img
+            width: 135px
+            height: 40px
+            
+        .links_box
+            gap: 25px
+    .footer_navigation
+        margin-bottom: 42px
+        .footer_list
+            display: flex
+            justify-content: space-between
+            @media (max-width: 992px)
+                flex-wrap: wrap
+                flex-direction: column
+                gap: 10px
+            li
+                font-size: 14px
+                line-height: 17px
+                padding-bottom: 2px
+                border-bottom: 0.5px solid #FFFFFF
+                white-space: nowrap
+                width: fit-content
+                &:hover
+                    a
+                        color: #FF6732
+    small
+        display: flex
+        text-align: center
+        max-width: 740px
+        margin: 0 auto
+        opacity: 0.4
+        font-weight: 400
+        font-size: 14px
+        line-height: 18px
+
+
+
+//accordion
+
+.accordion_concepts .accordion-item
+    background: inherit
+    background-color: inherit
+
+.accordion-button:not(.collapsed)
+    box-shadow: none
+
+.accordion-button:not(.collapsed), .accordion-button
+    background-color: inherit
+    color: #FFFFFF
+
+.accordion-button .collapsed
+    color: #FFFFFF
+    
+.accordion-button .collapsed, .accordion-button
+    padding: 32px 0 32px 0px
+
+.accordion-button:focus
+    border-color: inherit
+    box-shadow: none
+
+.accordion-item
+    border: none
+    border-bottom: 1px solid #FFFFFF
+
+.accordion-flush .accordion-item:first-child 
+    border-top: 1px solid #FFFFFF
+
+.accordion-flush .accordion-item:last-child
+    border-bottom: 1px solid #FFFFFF
+
+
+.accordion-item:first-of-type, .accordion-item
+    border-radius: 0
+
+.accordion-button
+    font-weight: 600
+    font-size: 24px
+    line-height: 125%
+    
+.accordion-button::after
+    background-image: url('/svg/accordion_btn.svg') !important
+
+.accordion-button:not(.collapsed)::after 
+    transform: rotate(45deg)
+
+.accordion-body
+    padding: 5px
+    color: #FFFFFF
+
+    
+
+
+
+
+
+
+
