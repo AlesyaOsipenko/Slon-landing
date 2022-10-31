@@ -10,8 +10,26 @@ body
     padding-top: 200px
     color: #FFFFFF
     scroll-behavior: smooth
+    position: relative
     @media (max-width: 1200px)
         padding-top: 150px
+    .pseudo1
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        img
+            width: 100%
+            height: auto
+    .pseudo2
+        position: absolute
+        left: -1%
+        top: 1.7%
+        z-index: -1
+        img
+            width: 100%
+            height: auto
+        
 
 
 ::-webkit-scrollbar
@@ -169,6 +187,7 @@ h4
     overflow-x: hidden
     overflow-y: auto
     outline: 0
+    z-index: 1000000
 
     .button-burger
         cursor: pointer
@@ -203,25 +222,13 @@ h4
             color: #FF6732
 
 
-
-
-.top-wrapper
-    overflow-x: hidden
-
 .header
-    position: relative
     transition: 0.3s
     position: fixed
     top: 0
     left: 0
     right: 0
-    // &::before
-    //     position: absolute
-    //     content:""
-    //     background-image: url('/img/ellipse1.png')   
-    //     background-repeat: no-repeat 
-    //     width: 1361.21px
-    //     height: 1361.21px
+        
 
     .header_wrapper
         padding: 24px 0 32px 0
@@ -279,13 +286,16 @@ h4
 .header.tiny
     background: #160c4e
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07)
-    z-index: 100
+    z-index: 1000000
     
 
 .about
     .about_top
         max-width: 686px
+        .about_title
+            z-index: 1000
         .about_text
+            z-index: 1000
             font-size: 24px
             font-weight: 400
             line-height: 30px
@@ -293,6 +303,7 @@ h4
                 font-size: 18px 
                 line-height: 18px 
     .about-col-right
+        z-index: 1000
         padding-left: 75px
         @media (max-width: 992px)
             padding-left: 12px
@@ -399,7 +410,7 @@ h4
     .circle_img
         max-width: 400px
         max-height: 400px
-        @media (max-width: 768px)
+        @media (max-width: 990px)
             display: none
 
     .principe--first
@@ -415,6 +426,8 @@ h4
             bottom:0px
             left: 50%
             transform: translate(-55%, 100%)
+            @media (max-width: 1200px)
+                width: auto
             @media (max-width: 768px)
                 display: none
 
@@ -437,6 +450,8 @@ h4
             bottom:0px
             left: 50%
             transform: translate(-55%, 100%)
+            @media (max-width: 1200px)
+                width: auto
             @media (max-width: 768px)
                 display: none
 
@@ -514,8 +529,9 @@ h4
         .swiper
             cursor: pointer
             .swiper-slide
-                display: flex
-                justify-content: center
+                @media (max-width: 768px)
+                    display: flex
+                    justify-content: center
 
         .swiper-pagination
             display: none
@@ -647,6 +663,8 @@ h4
 
     .priorities_wrapper
         gap: 82px
+        @media (max-width: 990px)
+            gap: 70px
         @media (max-width: 560px)
             flex-direction: column
             align-items: center
@@ -662,10 +680,12 @@ h4
                 @media (max-width: 1200px)
                     font-size: 18px
                     line-height: 21px
+                @media (max-width: 990px)
+                    font-size: 16px
                 @media (max-width: 560px)
                     text-align: center
         .img--first
-            width: 92px
+            width: 120px
             height: 132px
         .img--second
             width: 131px
@@ -678,7 +698,7 @@ h4
             height: 152px
         .img--fifth
             width: 156px
-            height: 156px
+            height: 157px
         .img--six 
             width: 153px
             height: 138px
@@ -735,6 +755,17 @@ h4
                 max-width: 100%
                 padding-bottom: 45px
     .example_bottom
+        position: relative
+        .pseudo
+            max-width: 768px
+            position: absolute
+            transform: translate(21%, 30%)
+            bottom: 0
+            left: 0
+            @media (max-width: 1200px)
+                display: none
+            img
+                width: 100%
         h3
             margin-bottom: 60px
         .row-top
@@ -833,6 +864,11 @@ h4
         padding: 14px
         border-top: 1px solid #C0C2CC
         border-bottom: 1px solid #C0C2CC
+        a
+            font-weight: 400
+            font-size: 14px
+            line-height: 125%
+            color: #818699
         
 .footer
     padding-bottom: 120px

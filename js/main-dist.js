@@ -39,5 +39,6 @@ const swiper = new Swiper('.catalog .swiper', {
 
 
 window.onscroll = function () {
-    if (window.scrollY < 200) document.querySelector('header').classList.add('tiny');
+    if (window.scrollY < 50) document.querySelector('header').classList.remove('tiny');
+    else document.querySelector('header').classList.add('tiny');
 };
