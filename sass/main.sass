@@ -7,28 +7,43 @@ html *
 body
     font-family: 'ProximaNova-Light', sans-serif
     background-color: #160c4e
-    padding-top: 200px
     color: #FFFFFF
     scroll-behavior: smooth
-    position: relative
-    @media (max-width: 1200px)
-        padding-top: 150px
-    .pseudo1
-        position: absolute
-        top: 0
-        right: 0
-        z-index: -1
-        img
-            width: 100%
-            height: auto
-    .pseudo2
-        position: absolute
-        left: -1%
-        top: 1.7%
-        z-index: -1
-        img
-            width: 100%
-            height: auto
+    .top-wrapper
+        position: relative
+        overflow: hidden
+        .pseudo1
+            position: absolute
+            width: 1361.21px
+            height: 1361.21px
+            top: -631px
+            right: -343px
+            border-radius: 50%
+            background: radial-gradient(77.43% 77.43% at 7.93% 56.3%, #FF6732 0%, rgba(82, 0, 255, 0) 100%)
+            -webkit-transform: rotate(-12.48deg)
+            transform: rotate(-12.48deg)
+            z-index: -1
+            @media screen and (max-width: 1050px)
+                width: 561px
+                height: 561px
+                top: -224px
+                right: -364px
+            
+        .pseudo2
+            position: absolute
+            width: 964.82px
+            height: 964.82px
+            top: 234px
+            left: -356px
+            border-radius: 50%
+            background:  radial-gradient(82.64% 82.64% at 86.53% 28.21%, #5200FF 0%, rgba(82, 0, 255, 0.970002) 0%, rgba(82, 0, 255, 0) 100%) 
+            transform: rotate(-10.23deg)
+            transform: rotate(-10.23deg)
+            @media screen and (max-width: 1050px)
+                width: 484px
+                height: 484px
+                top: 218px
+                left: -277px
         
 
 
@@ -66,24 +81,33 @@ img
 img, svg
     vertical-align: middle
 
+
 a
     text-decoration: none
     color: #FFFFFF
     transition: .3s
 
-a
+.button--active
+    font-family: 'ProximaNova-Bold', sans-serif
+    font-weight: 700
+    color: #FFFFFF
+    text-align: center
+    width: fit-content
+    font-size: 23px
+    line-height: 29px
+    background: #FF6732
+    border-radius: 32.2521px
+    border: 1px solid transparent
+    transition: 0.3s ease-out
     &:hover
+        background-color: #ff4b0c
+        border-color: #fe4200
         color: #FFFFFF
-        transform: translateY(-3px)
 
 
-.swiper::selection 
-    background: none
+.swiper
+    user-select: none
 
-
-// .row > *
-//     padding-left: 15px
-//     padding-right: 15px
     
 h1, h2
     color: #FFFFFF
@@ -139,7 +163,14 @@ h4
     margin-bottom: 32px
 
 .pb-65
-    padding-bottom: 65px    
+    padding-bottom: 65px  
+
+.pb-120
+    padding-bottom: 120px
+    @media (max-width: 1200px)
+        padding-bottom: 100px
+    @media (max-width: 991px)
+        padding-bottom: 80px  
 
 .pb-140
     padding-bottom: 140px
@@ -161,6 +192,9 @@ h4
         padding-bottom: 140px
     @media (max-width: 991px)
         padding-bottom: 100px
+
+.pr-5
+    padding-right: 5px
 
 .mr-80
     margin-right: 80px
@@ -223,13 +257,17 @@ h4
 
 
 .header
+    position: relative
     transition: 0.3s
     position: fixed
     top: 0
     left: 0
     right: 0
-        
-
+    a
+        &:hover
+            color: #FFFFFF
+            border-bottom: 1px solid #fff
+            transform: none
     .header_wrapper
         padding: 24px 0 32px 0
         display: flex
@@ -243,6 +281,7 @@ h4
         .logo
             &:hover
                 transform: none
+                border: none
 
         .header_navigation
             display: flex
@@ -251,8 +290,7 @@ h4
 
             .header_link
                 white-space: nowrap
-                &:hover
-                    color: #FF6732
+                letter-spacing: .2px
 
             .header_link--active
                 padding: 12px 24px
@@ -260,8 +298,11 @@ h4
                 border-radius: 420px
                 font-family: 'ProximaNova-Bold', sans-serif
                 font-weight: 700
+                border: 1px solid transparent
                 &:hover
-                    color: #FFFFFF
+                    background-color: #ff4b0c
+                    border-color: #fe4200
+                    border-bottom-color: #ff6732
 
             .header_link--pseudo
                 position: relative
@@ -276,9 +317,8 @@ h4
                     background-repeat: no-repeat
     .login-link
         padding-bottom: 1px
-        border-bottom: 1px solid #FFFFFF
         &:hover
-            color: #FF6732
+            border-bottom: 1px solid #FFFFFF
             transform: none
         @media (max-width: 1199px)
             position: absolute
@@ -286,10 +326,13 @@ h4
 .header.tiny
     background: #160c4e
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07)
-    z-index: 1000000
-    
+    z-index: 10000
+
 
 .about
+    padding-top: 200px
+    @media (max-width: 990px)
+        padding-top: 150px
     .about_top
         max-width: 686px
         .about_title
@@ -302,12 +345,15 @@ h4
             @media (max-width: 768px)
                 font-size: 18px 
                 line-height: 18px 
-    .about-col-right
-        z-index: 1000
-        padding-left: 75px
-        @media (max-width: 992px)
-            padding-left: 12px
-            margin-top: 20px 
+    .about_bottom
+        .about-col-left
+            z-index: 1
+        .about-col-right
+            z-index: 1000
+            padding-left: 75px
+            @media (max-width: 992px)
+                padding-left: 12px
+                margin-top: 20px 
 
 .concepts
     .concepts_title
@@ -339,13 +385,13 @@ h4
 .advantages--second
     margin-bottom: 55px
     .advantages--second_top
-        padding-bottom: 80px
+        padding-bottom: 60px
         .col-right
             padding-left: 65px
             @media (max-width: 992px)
                 padding-left: 12px
     .list_item
-        padding-left: 47px
+        padding-left: 45px
         margin-bottom: 35px
         position: relative
         list-style: block
@@ -358,26 +404,22 @@ h4
             height: 31px
             left: 0
             top: 0
+        p
+            max-width: 450px
+            @media (max-width: 992px)
+                max-width: 100%
             
 .principles
     .principles_title
         max-width: 910px
         margin: 0 auto 90px
 
-    .circle--second
-        margin-left: 162px
-        transform: rotate(-90deg)
-        @media (max-width: 560px)
-            margin-left: 0px
-
-    .circle--third
-        margin-right: 180px 
-        transform: rotate(-90deg)
-        @media (max-width: 560px)
-            margin-right: 0px
 
     .circle
-        background: radial-gradient(77.63% 62.32% at 86.53% 28.21%, #5F00A9 0%, rgba(92, 0, 184, 0.822398) 42.76%, rgba(82, 0, 255, 0) 127.75%)
+        background: transparent
+        background-image: url('/img/circle-left.png')
+        background-repeat: no-repeat
+        background-size: cover
         width: 358px
         height: 358px
         background-size: contain
@@ -391,9 +433,10 @@ h4
             width: 300px
             height: 300px
 
+
         .circle_number
             position: absolute
-            top: -18px
+            top: -25px
             left: 35px
         
         .circle_text
@@ -406,6 +449,22 @@ h4
                 font-size: 14px
     .circle:last-child
         margin-bottom: 0px
+    .circle--second
+        margin-left: 162px
+        background: transparent
+        background-image: url('/img/circle.png')
+        background-repeat: no-repeat
+        background-size: cover
+        @media (max-width: 560px)
+            margin-left: 0px
+
+    .circle--third
+        margin-right: 180px 
+        background-image: url('/img/circle.png')
+        background-repeat: no-repeat
+        background-size: cover
+        @media (max-width: 560px)
+            margin-right: 0px
 
     .circle_img
         max-width: 400px
@@ -437,35 +496,26 @@ h4
         @media (max-width: 560px)
             margin-right: 0px
 
+    .circle--third
+        @media (max-width: 560px)
+            margin-bottom: 0px
+
     .principe--second
         position: relative
         margin-bottom: 125px
         @media (max-width: 768px)
             margin-bottom: 0
-        p
-            transform: rotate(90deg)
+    
         .principePseudo--second
-            width: 790px
+            max-width: 790px
             position: absolute
-            bottom:0px
-            left: 50%
-            transform: translate(-55%, 100%)
+            bottom: -75px
+            left: 11%
             @media (max-width: 1200px)
-                width: auto
+                width: 100%
+                max-width: 790px
             @media (max-width: 768px)
                 display: none
-
-    .principe--third
-        p
-            transform: rotate(90deg)
-
-    .circle--second, .circle--third
-        .circle_number
-            top: 60px
-            left: 255px
-            transform: rotate(90deg)     
-            @media (max-width: 560px)
-                left: 215px
 
     .principe--first, .principe--second, .principe--third
         @media (max-width: 560px)
@@ -487,7 +537,10 @@ h4
         border-radius: 64px 64px 64px 0px
         max-width: 780px
         @media (max-width: 1100px)
+            margin-right: 15px 
             max-width: 670px
+        @media (max-width: 990px)
+            margin-right: 0px
 
     .row
         align-items: flex-end
@@ -522,14 +575,26 @@ h4
         .catalog-box
             width: 170px
             height: 205px
+            animation-timing-function: ease-out
+            animation-duration: .6s
+            transition: transform .25s ease-in-out,-webkit-transform .25s ease-in-out
             img
                 width: 100%
                 height: 100%
+                animation-timing-function: ease-out
+                animation-duration: .6s
+                transition: transform .25s ease-in-out,-webkit-transform .25s ease-in-out
+            &:hover
+                img
+                    transform: scale(1.05) rotate(-35deg)
+                    animation-timing-function: ease-out
+                    animation-duration: .6s
+                    transition: transform .25s ease-in-out,-webkit-transform .25s ease-in-out
 
         .swiper
             cursor: pointer
             .swiper-slide
-                @media (max-width: 768px)
+                @media (max-width: 990px)
                     display: flex
                     justify-content: center
 
@@ -559,97 +624,138 @@ h4
             transform: translateX(-90%) rotate(180deg)
             @media (max-width: 991px)
                 transform: translateX(15px) rotate(180deg)
+        
+        .slider-button-next, .slider-button-prev
+            z-index: 1000
+            position: relative
+            @media (max-width: 768px)
+                display: none
+        .slider-button-prev
+            .catalogPseudo
+                display: block
+                cursor: pointer
+                position: absolute
+                top: -85px
+                bottom: 0
+                left: -170px
+                width: 160px
+                height: 250px
+                overflow: hidden
+                background: linear-gradient(270deg, #160C4E 30.99%, rgba(22, 12, 78, 0) 100%)
+                @media (max-width: 1200px)
+                    width: 270px
+                    left: -290px
+                
+        .slider-button-next
+            .catalogPseudo
+                display: block
+                cursor: pointer
+                position: absolute
+                top: -55px
+                bottom: 0
+                right: 25px
+                width: 160px
+                height: 250px
+                overflow: hidden
+                background: linear-gradient(270deg, #160C4E 30.99%, rgba(22, 12, 78, 0) 100%)
+                @media (max-width: 1200px)
+                    width: 270px
+                    height: 250px
+                    top: -80px
+                    right: 15px
+                
         .swiper-button-disabled
             opacity: .3
             visibility: hidden
-        .catalogPseudo
-            position: absolute
-            right: 0
-            top: 0
-            background: linear-gradient(270deg, #160C4E 30.99%, rgba(22, 12, 78, 0) 100%)
-            width: 174px
-            height: 200px
-            z-index: 1
-            @media (max-width: 1200px)
-                width: 270px
-            @media (max-width: 768px)
-                display: none
-        .slider-button-next, .slider-button-prev
-            z-index: 1000
-            @media (max-width: 768px)
-                display: none
+            .catalogPseudo
+                @media (max-width: 991px)
+                    display: none
 
 .advantages
-    .advantages_title
-        padding-bottom: 100px  
-    .advantages_container
+    overflow: hidden
+    .margin
+        width: 1110px
+        margin: 0 auto
+        z-index: 5
         position: relative
-        height: 302px
-        @media (max-width: 1100px)
-            display: flex
+        @media screen and (max-width: 1300px)
+            width: 1100px
+        @media screen and (max-width: 1200px)
+            width: 940px
+        @media screen and (max-width: 1050px)
+            width: 100%
+            padding: 0 30px
+        .advantages_title
+            margin: 0 0 108px
             justify-content: center
-        @media (max-width: 990px)
-            flex-direction: column
-            height: auto
-            align-items: center
-            gap: 100px
-        .advantages_box
-            position: absolute
-            width: 302px
-            height: 302px
-            border-radius: 100%
-            display: flex
-            align-items: center
-            padding-left: 30px
-            @media (max-width: 1200px)
-                width: 270px
-                height: 270px
-            @media (max-width: 1100px)
-                position: static
-                width: 250px
-                height: 250px
-                padding-left: 15px
-            .advantage_box-desc
+        .circle-advantages
+            padding: 230px 0 245px
+            justify-content: center
+            gap: 40px
+            @media screen and (max-width: 1050px)
+                padding: 185px 0 100px
+                flex-direction: column
+                align-items: center
+            .box-circle
                 position: relative
-                max-width: 218px
-                h4
-                    margin-bottom: 5px
-                    @media (max-width: 1100px)
-                        font-size: 16px
-                p
-                    font-weight: 400
-                    font-size: 16px
-                    line-height: 125%
-                    @media (max-width: 1100px)
-                        font-size: 14px
-                img
+                max-width: 248px
+                @media screen and (max-width: 768px)
+                    max-width: 180px
+                @media screen and (max-width: 1050px)
+                    max-width: 400px
+                    margin-bottom: 100px
+                .circle
                     position: absolute
-                    top: -135px    
-        .advantages_box--first
-            background: linear-gradient(92.58deg, #E96F2A 2.16%, rgba(233, 111, 42, 0) 98.06%)
-            z-index: 1   
-            top: 10px
-            left: 5px
+                    width: 302px
+                    height: 302px
+                    border-radius: 50%
+                    left: -50px
+                    top: -90px
+                .advantage_box-desc
+                    position: relative
+                    max-width: 218px
+                    h4
+                        position: relative
+                        margin-bottom: 5px
+                        @media (max-width: 768px)
+                            font-size: 16px
+                    p
+                        position: relative
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 125%
+                        @media (max-width: 1100px)
+                            font-size: 14px
+                    img
+                        position: absolute
+                        top: -135px
+                        left: -35px 
+    .advantages_description
+        align-items: flex-start
+        max-width: 735px
+        h3
+            font-size: 40px
+            line-height: 50px
+            font-weight: 700
+            margin-bottom: 24px
+        p
+            font-size: 20px
+            line-height: 25px
+            max-width: 555px
+    .box-circle:nth-child(1) .circle
+        background: linear-gradient(92.58deg, #E96F2A 2.16%, rgba(233, 111, 42, 0) 98.06%)
+    .box-circle:nth-child(2) .circle
+        background: linear-gradient(92.58deg, #A930AB 2.16%, rgba(169, 48, 171, 0) 98.06%)
+    .box-circle:nth-child(3) .circle
+        background: linear-gradient(92.58deg, #1BA3C0 2.16%, rgba(27, 163, 192, 0) 98.06%)
+    .box-circle:nth-child(4) .circle   
+        background: linear-gradient(92.58deg, #7113BB 2.16%, rgba(113, 19, 187, 0) 98.06%)
 
-        .advantages_box--second
-            background: linear-gradient(92.58deg, #A930AB 2.16%, rgba(169, 48, 171, 0) 98.06%)
-            z-index: 2
-            top: 10px
-            left: 265px
-
-        .advantages_box--third
-            background: linear-gradient(92.58deg, #1BA3C0 2.16%, rgba(27, 163, 192, 0) 98.06%)
-            z-index: 3
-            top: 10px
-            left: 525px
-
-        .advantages_box--fourth
-            background: linear-gradient(92.58deg, #7113BB 2.16%, rgba(113, 19, 187, 0) 98.06%)
-            z-index: 4
-            top: 10px
-            left: 785px    
 
 .about--second
+    h2
+        @media (max-width: 768px)
+            margin-bottom: 24px
     .col-right
         padding-left: 65px
         @media (max-width: 992px)
@@ -658,7 +764,7 @@ h4
 .priorities
     h2
         max-width: 786px
-        padding-bottom: 90px
+        padding-bottom: 50px
         margin: 0 auto
 
     .priorities_wrapper
@@ -673,7 +779,7 @@ h4
             max-width: 320px
             align-items: center
             img
-                margin-bottom: 52px
+                margin-bottom: 35px
             p
                 font-size: 24px
                 line-height: 29px
@@ -684,24 +790,6 @@ h4
                     font-size: 16px
                 @media (max-width: 560px)
                     text-align: center
-        .img--first
-            width: 120px
-            height: 132px
-        .img--second
-            width: 131px
-            height: 139px
-        .img--third
-            width: 118px
-            height: 130px
-        .img--fourth
-            width: 163px
-            height: 152px
-        .img--fifth
-            width: 156px
-            height: 157px
-        .img--six 
-            width: 153px
-            height: 138px
 
 
 .steps
@@ -717,14 +805,14 @@ h4
             @media (max-width: 560px) 
                 display: none
         .steps_inner
-            padding-left: 10px
+            padding-left: 60px
             align-items: flex-end
             @media (max-width: 560px) 
                 align-items: center
                 padding-left: 0
             .steps_box
                 display: flex
-                padding: 32px 70px 32px 40px
+                padding: 32px 60px 32px 40px
                 width: 95%
                 border: 2px solid #FF6732
                 border-radius: 24px
@@ -747,6 +835,7 @@ h4
                 margin-bottom: 0
 
 .example
+    padding-bottom: 45px
     .example_top
         padding-bottom: 80px
         h2
@@ -754,20 +843,23 @@ h4
             @media (max-width: 1200px)
                 max-width: 100%
                 padding-bottom: 45px
+                text-align: center
+        .col--right
+            padding-left: 60px
+            @media (max-width: 768px)
+                padding-left: 15px
     .example_bottom
         position: relative
         .pseudo
-            max-width: 768px
             position: absolute
-            transform: translate(21%, 30%)
-            bottom: 0
-            left: 0
-            @media (max-width: 1200px)
+            transform: translate(18%, 45%)
+            bottom: 240px
+            @media (max-width: 1100px)
                 display: none
             img
                 width: 100%
         h3
-            margin-bottom: 60px
+            margin-bottom: 45px
         .row-top
             margin-bottom: 205px
             display: flex
@@ -781,7 +873,7 @@ h4
             grid-template-columns: repeat(3, 312px)
             grid-gap: 70px
             grid-template-rows: repeat(2, 192px)
-            row-gap: 215px
+            row-gap: 245px
             @media (max-width: 1100px)
                 grid-template-columns: repeat(2, 312px)
                 grid-template-rows: repeat(3, 192px)
@@ -802,10 +894,10 @@ h4
             justify-content: center
             text-align: center
             padding: 0 10px
-            // max-width: 312px
-            // height: 192px
-            background: linear-gradient(to right bottom, #210a6e 0%, rgba(82, 0, 255, 0) 100%)
             border-radius: 6px
+            background: transparent
+            background-image: url('/svg/example_card.svg')
+            background-repeat: no-repeat
             p
                 font-weight: 400
                 font-size: 18px
@@ -839,13 +931,24 @@ h4
                     display: none    
 
 .concepts--third
+    overflow: hidden
+    margin-top: -35px
+    @media (max-width: 1100px)
+        margin-top: -10px
+    @media (max-width: 768px)
+        margin-top: 0px
     .title
         max-width: 830px
         margin: 0 auto 60px
+    .col--left
+        h4 
+            max-width: 415px
+            @media (max-width: 991px)
+                max-width: 100%
     .col--right
         padding-left: 60px
         @media (max-width: 992px)
-            padding-left: 12px
+            padding-left: 15px
     h4
         @media (max-width: 992px)
             padding-bottom: 45px    
@@ -881,6 +984,8 @@ h4
         margin-bottom: 42px
         a
             padding-bottom: 40px
+            &:hover
+                color: #ff4b0c
         img
             width: 135px
             height: 40px
@@ -888,24 +993,23 @@ h4
         .links_box
             gap: 25px
     .footer_navigation
-        margin-bottom: 42px
+        margin-bottom: 24px
         .footer_list
             display: flex
             justify-content: space-between
             @media (max-width: 992px)
                 flex-wrap: wrap
-                flex-direction: column
                 gap: 10px
             li
                 font-size: 14px
                 line-height: 17px
                 padding-bottom: 2px
-                border-bottom: 0.5px solid #FFFFFF
                 white-space: nowrap
                 width: fit-content
                 &:hover
                     a
-                        color: #FF6732
+                        color: #FFFFFF
+                        border-bottom: 0.5px solid #FFFFFF
     small
         display: flex
         text-align: center
@@ -959,6 +1063,8 @@ h4
     font-weight: 600
     font-size: 24px
     line-height: 125%
+    @media (max-width: 560px)
+        font-size: 18px
     
 .accordion-button::after
     background-image: url('/svg/accordion_btn.svg') !important

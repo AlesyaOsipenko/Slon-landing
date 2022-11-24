@@ -10,8 +10,11 @@ const swiper = new Swiper('.catalog .swiper', {
             spaceBetween: 10,
         },
         560: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 10,
+        },
+        990: {
+            slidesPerView: 4
         },
         1199: {
             slidesPerView: 5
